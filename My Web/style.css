@@ -1,0 +1,132 @@
+body{
+    background-image: url("backdrop.jpg");
+    margin: 0 auto;
+    line-height: 15px;
+    background-size: cover;
+    
+    
+}
+
+h1{
+    font-family: cursive;
+    font-size: 50px;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 25px 50px;
+    animation-name: drip;
+    animation-duration: 3s;
+    animation-delay: 1s;
+
+    
+}
+
+header{
+    background-color: brown;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0.5;
+    position: static;
+    float: right;
+    
+}
+
+.container{
+    height: 10px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.container ul::after{
+    content: "";clear: both;
+    display: block;
+}
+
+ul li{
+    float: left;
+}
+
+ul ul{
+    display:none;
+}
+
+ul li:hover > ul{
+    display: block;
+}
+
+ul li:hover{
+    background: #000;
+    transition: 1.2s;
+    
+}
+
+ul li:hover a{
+    color: white;
+}
+
+ul ul{
+    background: #000;
+    padding: 0;
+    margin: 0;
+    position: absolute; top: 100%;
+}
+
+ul ul li{
+    float: none;
+    position: relative;
+}
+
+ul ul li a{
+    padding: 15px;
+    color: white;
+    width: 80px;
+    text-align: left;
+}
+
+ul ul li a:hover{
+    background: rgb(255, 30, 0);
+    transition: 1s;
+}
+
+.paraph h2{
+    font-family: sans-serif;
+    padding:80px 0 0 25%;
+    animation-name: drop-bounce;
+    animation-duration: 2s;
+}
+
+.paraph p{
+    display: table;
+    animation-name: drop-bounce;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+
+@keyframes drip{
+    from{transform: translateX()}
+    to{transform: translateX(500px)}
+    
+}
+
+@keyframes drop-bounce{
+    
+    from{transform: translateY(500px)}
+    to{transform: translateY(0)}
+}
